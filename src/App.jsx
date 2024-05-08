@@ -1,13 +1,22 @@
 import { useState } from "react";
 import Datepicker from "./components/Datepicker";
+import DisplayTimer from "./components/DisplayTimer";
 import "./App.css";
 
 function App() {
-  const [selected, onSelected] = useState(null);
+  const [selected, setSelectedDate] = useState(null);
+  const [timer, setTimer] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
   return (
     <div className="container-Body">
       <h1>Countdown Timer</h1>
-      <Datepicker />
+      <Datepicker onSelect={setSelectedDate} />
+      <DisplayTimer {...timer} />
     </div>
   );
 }

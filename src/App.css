@@ -45,3 +45,18 @@
     padding: 5px;
     font-size: 1.5em;
 }
+
+.countdown_display {
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.countdown_legend {
+  display : flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
