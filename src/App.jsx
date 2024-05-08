@@ -12,8 +12,8 @@ function App() {
     minutes: 0,
     seconds: 0,
   });
-  const [finish, setFinish] = useState("");
 
+  const [finish, setFinish] = useState("");
   const [running, setRunning] = useState(false);
   useEffect(() => {
     let interval;
@@ -45,6 +45,7 @@ function App() {
   const handleStart = () => {
     if (selectedDate) {
       setRunning(true);
+      setFinish("");
     }
   };
 
