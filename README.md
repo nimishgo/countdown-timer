@@ -1,3 +1,12 @@
+# Count Down Timer 
+- User input for the target date and time.
+- Real-time countdown display.
+- Ability to cancel and create a new countdown at any time.
+- Responsive design for various screen sizes.
+- Optional: Sound notification for when the countdown is complete.
+- Optional: Persist countdown even if the browser tab is reopened again.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
