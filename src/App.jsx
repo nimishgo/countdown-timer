@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Datepicker from "./components/Datepicker";
 import DisplayTimer from "./components/DisplayTimer";
+import Toggle from "./components/Toggle";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <h1>Countdown Timer</h1>
       <Datepicker onSelect={setSelectedDate} />
       <DisplayTimer {...timer} />
+      <Toggle />
     </div>
   );
 }
