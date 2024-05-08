@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Datepicker from "./components/Datepicker";
 import DisplayTimer from "./components/DisplayTimer";
 import Toggle from "./components/Toggle";
 import "./App.css";
 
 function App() {
-  const [selected, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
   const [timer, setTimer] = useState({
     days: 0,
     hours: 0,
