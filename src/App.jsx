@@ -12,6 +12,7 @@ function App() {
     minutes: 0,
     seconds: 0,
   });
+  const [finish, setFinish] = useState("");
 
   const [running, setRunning] = useState(false);
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
         distance = distance - 1000;
         if (distance <= 0) {
           clearInterval(interval);
+          setFinish("Yes");
           setRunning(false);
           setTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         } else {
@@ -56,7 +58,12 @@ function App() {
       <h1>Countdown Timer</h1>
       <Datepicker onSelect={setSelectedDate} />
       <DisplayTimer {...timer} />
-      <Toggle onStart={handleStart} onReset={handleReset} running={running} />
+      <Toggle
+        onStart={handleStart}
+        onReset={handleReset}
+        running={running}
+        finish={finish}
+      />
     </div>
   );
 }
